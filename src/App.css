@@ -1,13 +1,56 @@
+/*
+Custom brand variables
+*/
 
-html {
-  color: #222;
-  font-size: 1em;
-  line-height: 1.4;
+:root {
+  --color-bt-purple: #5514b4;
+  --font-family: "Calibri, Sans-Serif";
+  --light-font-color: #ffffff;
+  --dark-font-color: #333333;
 }
 
 /*
- * Remove text-shadow in selection highlight:
- * Customize the background color to match your design.
+ * Reset styling
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+  list-style: none;
+}
+
+/*
+ * Font setup for easy calculations
+ */
+
+html {
+  line-height: 1.4;
+  font-size: 62.5%; /* 1em = 10px: */
+}
+
+/*
+ * Set background theme for key elements that use the brand colour
+ */
+
+header,
+footer,
+button {
+  background-color: var(--color-bt-purple);
+  color: var(--light-font-color);
+}
+
+/*
+ * Set font theme
+ */
+
+body, p, span {
+  color: var(--dark-font-color);
+}
+
+/*
+ * Remove text-shadow in selection highlight
  */
 
 ::-moz-selection {
@@ -65,14 +108,6 @@ fieldset {
 textarea {
   resize: vertical;
 }
-
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
 
 /*
  * Hide visually and from screen readers
