@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import Header from "./components/header/Header";
 import ArticleList from "./components/articles/ArticleList";
+import Footer from "./components/footer/Footer";
 
 function App() {
   const [isLoading, setIsLoading] = useState(false);
@@ -80,7 +81,7 @@ function App() {
           </>
         )}
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }
