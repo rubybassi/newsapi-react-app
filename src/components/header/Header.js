@@ -3,7 +3,7 @@ import "./header.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
-const Header = () => {
+const Header = ({ searchQuery, handleUserSearchInput, onSearchSubmit }) => {
   return (
     <header className="nav">
       <img
@@ -15,10 +15,14 @@ const Header = () => {
         <input
           className="nav-search-input"
           type="text"
+          value={searchQuery}
+          onChange={handleUserSearchInput}
           name="search"
-          placeholder="Search latest news.."
+          placeholder="Search the latest news..."
+          required
+          minLength="3"
         />
-        <button className="nav-search-button">
+        <button className="nav-search-button" onClick={onSearchSubmit}>
           <FontAwesomeIcon icon={faSearch} />
         </button>
       </form>
