@@ -1,12 +1,25 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
 import Header from "./components/header/Header";
+import ArticleList from "./components/articles/ArticleList";
 
 function App() {
   return (
-    <div>
+    <>
       <Header />
-    </div>
+      <div className="main-wrapper">
+       <ArticleList />
+       <ArticleList />
+       <ArticleList />
+       <ArticleList />
+       <ArticleList />
+       <ArticleList />
+       <ArticleList />
+       <ArticleList />
+       <ArticleList />
+       <ArticleList />
+      </div>
+    </>
   );
 }
 
