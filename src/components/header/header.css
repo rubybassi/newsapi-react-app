@@ -1,0 +1,79 @@
+/*
+Static position by default
+ */
+.nav {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+  padding: 0 1.5rem;
+}
+
+.nav-logo {
+  height: 5rem;
+}
+
+.nav-search {
+  position: relative;
+  margin-left: 3rem;
+  width: 100%;
+  outline-color: #5514b4;
+}
+
+.nav-search-input {
+  font-size: 1.5rem;
+  padding: 1.2em;
+  border: 0;
+  width: 100%;
+  
+}
+
+/*
+Style outline for accessiblilty
+ */
+.nav-search-input:focus { 
+  outline: 2px solid deeppink;
+}
+
+.nav-search-button {
+  font-size: 1.5rem;
+  padding: 1.2em;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border: none;
+}
+
+/*
+Style outline for accessiblilty
+ */
+.nav-search-button:hover {
+  background-color:#5514b4;
+  opacity: 0.6;
+  color: #ffffff;
+}
+
+.nav-search-button:focus {
+  outline: 2px solid deeppink;
+}
+
+/*
+Set extra side padding on tablets and larger devices
+ */
+@media only screen and (min-width: 481px) {
+  .nav {
+    padding: 0 6rem;
+  }
+}
+
+/*
+Set max width on desktops
+ */
+@media only screen and (min-width: 1024px) {
+  .nav-search {
+    max-width: 1000px;
+  }
+}
