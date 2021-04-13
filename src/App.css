@@ -59,9 +59,17 @@ button {
 
 body,
 p,
-span {
+span, a {
   color: var(--dark-font-color);
 }
+
+/*
+ * Remove default styling and underlines
+ */
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:active { text-decoration: none; }
+
 
 /*
  * Remove text-shadow in selection highlight
