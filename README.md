@@ -20,13 +20,13 @@ App Summary:
 
 ## Preview
 
-> Visit the deployed application on [GitHub pages]().
+> Please follow the execute instructions below as the News Api has a CORS policy.
 
 #### Demo
-![Demo]()
+![Demo](https://user-images.githubusercontent.com/25780327/114634995-b38b4b80-9cbb-11eb-9680-2a25395e0a53.gif)
 
 #### Mobile Responsive
-![App](src/assets/appmockup.png)
+![App](src/assets/bt-mockup.png)
 
 ## Execute
 Clone the repo and in the command line run `npm install` or shortcut `npm i` to download all the npm package dependancies, then invoke the application with command `npm run start`.

@@ -13,7 +13,7 @@ function App() {
 
   const URL = `https://newsapi.org/v2/everything?q=${searchQuery}&sortBy=popularity`;
 
-  // set newsapi key in http header as recommended
+  // set newsapi key in http header as recommended by documentation https://newsapi.org/docs/get-started
   const fetchParams = {
     headers: {
       Authorization: "3e8fcdeadac74b35b8e9ef95298042b7",
@@ -27,14 +27,16 @@ function App() {
       setErrorMessage("");
       const response = await fetch(URL, fetchParams);
       const payload = await response.json();
-      if (payload.length && Array.isArray(payload.articles)) {
+      if (payload.articles.length > 0 && Array.isArray(payload.articles)) {
         setArticles(payload.articles.splice(0, 10)); // stores first 10 news articles
         setIsLoading(false);
         setSearchQuery("");
       } else throw new Error("payload is empty or not an array"); // logs custom error object if payload is empty or !array
     } catch (error) {
       console.log(error.message);
-      setErrorMessage("Sorry there has been an error fetching your results. Please try again.");
+      setErrorMessage(
+        "Sorry there has been an error fetching your results. Please try again."
+      );
       setIsLoading(false);
     }
   };
@@ -59,8 +61,8 @@ function App() {
         searchQuery={searchQuery}
         handleUserSearchInput={handleUserSearchInput}
         onSearchSubmit={onSearchSubmit}
-        />
-        {inputErrorMessage && <p className="input-error">{inputErrorMessage}</p>}
+      />
+      {inputErrorMessage && <p className="input-error">{inputErrorMessage}</p>}
       <main className="main-wrapper">
         {isLoading ? (
           <h1>Fecthing articles...</h1>
@@ -75,7 +77,7 @@ function App() {
                     author={article.author}
                     description={article.description}
                     url={article.url}
-                    imageUrl={article?.urlToImage}
+                    imageUrl={article.urlToImage}
                   />
                 ))
               : null}
