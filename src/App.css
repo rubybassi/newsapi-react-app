@@ -31,21 +31,35 @@ html {
 }
 
 /*
+ * Height set fill content
+ */
+
+body {
+  min-height: 100%;
+}
+
+/*
  * Set background theme for key elements that use the brand colour
  */
 
 header,
-footer,
-button {
+footer {
   background-color: var(--color-bt-purple);
   color: var(--light-font-color);
+}
+
+button {
+  background-color: #ffffff;
+  color: var(--color-bt-purple);
 }
 
 /*
  * Set font theme
  */
 
-body, p, span {
+body,
+p,
+span {
   color: var(--dark-font-color);
 }
 
