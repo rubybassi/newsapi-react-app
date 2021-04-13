@@ -65,7 +65,7 @@ function App() {
           <h1>Fecthing articles...</h1>
         ) : (
           <>
-            {errorMessage && <h1>{errorMessage}</h1>}
+            {errorMessage && <h2>{errorMessage}</h2>}
             {articles.length > 0
               ? articles.map((article, index) => (
                   <ArticleList

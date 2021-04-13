@@ -8,16 +8,16 @@ const ArticleList = ({ title, author, description, url, imageUrl }) => {
     text.length > 150 ? `${text.substring(0, 150)}...` : text;
 
   return (
-    <div className="card-item-wrapper">
+    <section className="card-item-wrapper">
       <a href={url} className="card-link" target="_blank" rel="noopener noreferrer">
         <img src={imageUrl || "https://picsum.photos/200/300" } alt={title} />
-        <div className="card-item-content">
+        <article className="card-item-content">
           <h3>{title}</h3>
           {author ? <h4>By {author}</h4> : null}
           <p>{truncateDescription(description)}</p>
-        </div>
+        </article>
       </a>
-    </div>
+    </section>
   );
 };
 

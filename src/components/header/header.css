@@ -11,8 +11,12 @@ Static position by default
   padding: 0 1.5rem;
 }
 
+/*
+Fixed dimensions for SEO / lighthouse report
+ */
 .nav-logo {
-  height: 5rem;
+  height: 50px;
+  width: 50px;
 }
 
 .nav-search {
