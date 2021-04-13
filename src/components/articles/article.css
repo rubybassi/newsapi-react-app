@@ -1,0 +1,76 @@
+
+.card-item-wrapper {
+  width: 350px;
+  padding: 1rem;
+  transition: box-shadow .3s;
+  margin: 1rem 0;
+}
+
+.card-item-wrapper:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.2); 
+}
+
+.card-item-wrapper img {
+  display: block;
+  width: 350px;
+  height: 175px;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.card-item-content {
+  padding: 1rem;
+  background-color: #ffffff;
+}
+
+.card-item-content h3 {
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+
+.card-item-content a {
+  font-size: 1.6rem;
+  margin-top: 1rem;
+  display: block;
+  text-decoration: none;
+  background-color: #5514b4;
+  color: white;
+  border-radius: 0.15rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.card-item-content a:visited {
+  color: #ffffff;
+}
+
+.card-item-content a:hover {
+  text-decoration: underline;
+}
+
+/*
+Set flex basis for larger phones to display two cards per row
+ */
+@media only screen and (min-width: 480px) {
+  .card-item-wrapper {
+    flex: 0 1 50%;
+  }
+}
+
+/*
+Set flex basis for tablets to display three cards per row
+ */
+@media only screen and (min-width: 769px) {
+  .card-item-wrapper {
+    flex: 0 1 33%;
+  }
+}
+
+/*
+Set flex basis for desktops to display four cards per row
+ */
+@media only screen and (min-width: 1025px) {
+  .card-item-wrapper {
+    flex: 0 1 25%;
+  }
+}

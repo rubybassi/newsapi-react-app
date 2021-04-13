@@ -201,6 +201,25 @@ textarea {
   clear: both;
 }
 
+/*
+ * Main content styling for article cards
+ */
+
+.main-wrapper {
+  height: 100%;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  margin-top: 2rem;
+}
+
+
+
+
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
    These examples override the primary ('mobile first') styles.
