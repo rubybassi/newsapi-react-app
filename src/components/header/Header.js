@@ -19,10 +19,8 @@ const Header = ({ searchQuery, handleUserSearchInput, onSearchSubmit }) => {
           onChange={handleUserSearchInput}
           name="search"
           placeholder="Search the latest news..."
-          required
-          minLength="3"
         />
-        <button className="nav-search-button" onClick={onSearchSubmit}>
+        <button className="nav-search-button" onClick={onSearchSubmit} aria-label="search">
           <FontAwesomeIcon icon={faSearch} />
         </button>
       </form>
